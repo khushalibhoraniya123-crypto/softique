@@ -11,22 +11,28 @@ export default function ProductShowcase() {
 
   const productImages = [
     {
-      title: 'Dual Packet Display',
-      subtitle: '50 & 70 Sheets Packets with embossed napkin stack',
-      src: siteConfig.media.heroDual,
-      badge: 'Actual Product Shot',
+      title: 'Packaging Design',
+      subtitle: 'Official Softique™ front face packaging artwork — India\'s No.1 Tissue Brand',
+      src: siteConfig.media.packageArtwork,
+      badge: 'Official Package Design',
     },
     {
-      title: 'Dining Table Setting',
-      subtitle: 'Real Softique packet in everyday hospitality presentation',
+      title: '3D Sealed Packet',
+      subtitle: 'Sealed hygienic plastic packet with official packaging artwork',
       src: siteConfig.media.heroProduct,
-      badge: 'Hospitality Context',
+      badge: 'Packaged Product',
+    },
+    {
+      title: 'Dual Pack & Napkins',
+      subtitle: '50 & 70 Sheets Packets displayed with embossed napkins',
+      src: siteConfig.media.heroDual,
+      badge: 'Pack & Presentation',
     },
     {
       title: 'Embossed Paper Texture',
       subtitle: 'Close-up detail of virgin fiber texture & border embossing',
       src: siteConfig.media.productDetail,
-      badge: 'Macro Detail',
+      badge: 'Paper Texture',
     },
   ];
 
@@ -74,7 +80,7 @@ export default function ProductShowcase() {
             </div>
 
             {/* Thumbnail Selectors */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               {productImages.map((img, idx) => (
                 <button
                   key={img.title}
@@ -246,3 +252,4 @@ export default function ProductShowcase() {
     </section>
   );
 }
+

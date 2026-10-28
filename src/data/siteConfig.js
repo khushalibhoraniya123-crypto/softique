@@ -213,6 +213,7 @@ export const siteConfig = {
   ],
 
   media: {
+    packageArtwork: "/images/softique-package.png",
     heroProduct: "/images/softique-product.jpg",
     heroDual: "/images/softique-product-dual.png",
     productDetail: "/images/softique-product-detail.jpg",
@@ -221,3 +222,4 @@ export const siteConfig = {
     logo: "/images/softique-logo.png",
   },
 };
+

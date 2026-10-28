@@ -1,10 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowDown, ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, MapPin, Eye, Box } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import Button from '../components/Button';
 
 export default function Hero() {
+  const [activeTab, setActiveTab] = useState('package'); // 'package' | 'packet' | 'dual'
+
+  const heroMedia = {
+    package: {
+      src: siteConfig.media.packageArtwork,
+      alt: "Softique Paper Napkin official front face packaging design - Soft. Clean. Reliable.",
+      title: "Official Packaging Design",
+      tag: "Exact Packaging Artwork",
+      note: "100% Virgin Fiber • Soft & Absorbent • 100% Skin Friendly",
+    },
+    packet: {
+      src: siteConfig.media.heroProduct,
+      alt: "Softique Paper Napkin 3D plastic sealed packet on dining table",
+      title: "Sealed 3D Plastic Packet",
+      tag: "Actual Product Photo",
+      note: "Hygienic Protective Poly Packet",
+    },
+    dual: {
+      src: siteConfig.media.heroDual,
+      alt: "Softique Napkin Tissue Paper - 50 and 70 sheets packets with embossed napkins",
+      title: "Pack & Napkin Presentation",
+      tag: "Hospitality Display",
+      note: "50 & 70 Sheets Packets with embossed napkins",
+    },
+  };
+
+  const currentMedia = heroMedia[activeTab];
+
   return (
     <section
       id="hero"
@@ -94,7 +122,7 @@ export default function Hero() {
                 size="lg"
                 className="w-full sm:w-auto shadow-md"
               >
-                Explore Our Product
+                Explore Packaging & Product
               </Button>
               <Button
                 href="#enquiry"
@@ -109,7 +137,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Authentic Real Product Photography Showcase */}
+          {/* Right Column: Authentic Packaging & Photography Showcase */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -118,32 +146,76 @@ export default function Hero() {
               className="relative"
             >
               {/* Luxury Frame Container */}
-              <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#FFFFFF] via-[#FBF9F5] to-[#EDE7DB] border border-[#E3DC CE] shadow-2xl overflow-hidden group">
+              <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#FFFFFF] via-[#FBF9F5] to-[#EDE7DB] border border-[#E3DCCE] shadow-2xl overflow-hidden group">
                 
-                {/* Real Product Image */}
+                {/* View Switcher Tabs */}
+                <div className="flex items-center justify-between gap-1 p-1 mb-2 bg-[#F1EDE5] rounded-xl text-xs font-medium">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('package')}
+                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
+                      activeTab === 'package'
+                        ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
+                        : 'text-[#686256] hover:text-[#1C1E21]'
+                    }`}
+                  >
+                    Packaging Design
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('packet')}
+                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
+                      activeTab === 'packet'
+                        ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
+                        : 'text-[#686256] hover:text-[#1C1E21]'
+                    }`}
+                  >
+                    3D Packet
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('dual')}
+                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
+                      activeTab === 'dual'
+                        ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
+                        : 'text-[#686256] hover:text-[#1C1E21]'
+                    }`}
+                  >
+                    Table Display
+                  </button>
+                </div>
+
+                {/* Main Image Display */}
                 <div className="relative rounded-2xl overflow-hidden bg-white aspect-[4/3] flex items-center justify-center p-2">
-                  <img
-                    src={siteConfig.media.heroDual}
-                    alt="Softique Napkin Tissue Paper - 50 and 70 sheets plastic packets with embossed napkins"
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                    loading="eager"
-                  />
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={activeTab}
+                      initial={{ opacity: 0, scale: 0.97 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.97 }}
+                      transition={{ duration: 0.3 }}
+                      src={currentMedia.src}
+                      alt={currentMedia.alt}
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                    />
+                  </AnimatePresence>
                   
                   {/* Subtle authentic product overlay tags */}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#E6E0D5] text-[11px] font-medium text-[#1C1E21] shadow-xs flex items-center gap-1.5">
+                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full border border-[#E6E0D5] text-[11px] font-medium text-[#1C1E21] shadow-xs flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-[#0E63B8]"></span>
-                    Actual Product Photograph
+                    {currentMedia.tag}
                   </div>
 
                   <div className="absolute bottom-4 right-4 bg-[#1C1E21]/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-xs font-medium shadow-md">
-                    50 & 70 Sheets
+                    India's NO.1 Tissue Brand
                   </div>
                 </div>
 
                 {/* Micro caption under photo */}
                 <div className="mt-3 px-2 py-1 flex items-center justify-between text-xs text-[#6F695D]">
-                  <span className="font-serif italic text-sm text-[#1C1E21]">Softique Napkin Tissue</span>
-                  <span className="text-[11px] uppercase tracking-wider text-[#9E9585]">Sealed Plastic Packets</span>
+                  <span className="font-serif italic text-sm text-[#1C1E21]">{currentMedia.title}</span>
+                  <span className="text-[11px] uppercase tracking-wider text-[#9E9585]">100% Virgin Fiber</span>
                 </div>
               </div>
 
@@ -159,9 +231,9 @@ export default function Hero() {
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-[#1C1E21]">100% Virgin Fiber</div>
+                    <div className="text-xs font-semibold text-[#1C1E21]">Original Packaging Artwork</div>
                     <div className="text-[11px] text-[#636873] leading-snug mt-0.5">
-                      Soft texture, embossed absorbency, skin-friendly daily hygiene.
+                      Soft. Clean. Reliable. 100% Natural Virgin Fiber & Skin Friendly.
                     </div>
                   </div>
                 </div>
@@ -183,3 +255,4 @@ export default function Hero() {
     </section>
   );
 }
+

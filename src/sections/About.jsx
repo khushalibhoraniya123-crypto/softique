@@ -51,7 +51,7 @@ export default function About() {
           {/* Right Column: Narrative Story */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase mb-4 bg-[#EFECE4] text-[#6E6350] border border-[#E3DC CE]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase mb-4 bg-[#EFECE4] text-[#6E6350] border border-[#E3DCCE]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C5A880]"></span>
               About Our Company
             </div>
@@ -108,3 +108,4 @@ export default function About() {
     </section>
   );
 }
+
