@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FBFBF9;
+    color: #1C1E21;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle luxury utilities */
+.editorial-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(230, 224, 214, 0.8);
+}
+
+.luxury-glass-dark {
+  background: rgba(18, 21, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-luxury {
+  background: #FFFFFF;
+  border: 1px solid #EAE5DC;
+  box-shadow: 0 4px 20px -2px rgba(28, 30, 33, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover {
+  border-color: #D6CEBE;
+  box-shadow: 0 12px 30px -4px rgba(28, 30, 33, 0.08);
+}
+
+/* Subtle macro paper texture overlay */
+.paper-texture {
+  background-image: radial-gradient(rgba(28, 30, 33, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CFC5B4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B4A996;
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid #8E7A5A;
+  outline-offset: 2px;
+}
