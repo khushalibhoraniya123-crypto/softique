@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageSquare, Mail, MapPin, Send, CheckCircle2, AlertCircle, Clock, ShieldAlert } from 'lucide-react';
+import { Phone, MessageSquare, Mail, MapPin, Send, CheckCircle2, AlertCircle, Clock, ShieldAlert, ShieldCheck } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
