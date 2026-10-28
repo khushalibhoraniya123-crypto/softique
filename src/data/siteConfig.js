@@ -130,8 +130,8 @@ export const siteConfig = {
     subheadline: "Honest, focused manufacturing with dedicated napkin converting machinery in Rajkot.",
     unitSummary: "Softique currently operates one high-precision napkin converting machine. Rather than overextending across multiple lines, our single-line focus ensures hands-on attention to folding precision, clean embossing, and tight packet sealing on every run.",
     isMachinePhotoPlaceholder: true, // Set to false once the owner uploads actual workshop photo
-    machinePhotoPath: "/images/softique-machine.jpg",
-    machinePlaceholderNote: "Photo placeholder active. Owner can place the actual machine photo at public/images/softique-machine.jpg.",
+    machinePhotoPath: "/images/softique-machine.webp",
+    machinePlaceholderNote: "Photo placeholder active. Owner can place the actual machine photo at public/images/softique-machine.webp.",
     
     // Truthful, editable step-by-step workflow
     steps: [
@@ -215,16 +215,18 @@ export const siteConfig = {
   ],
 
   media: {
-    packageArtwork: "/images/softique-package.png",
-    packetStudio43: "/images/softique-packet-studio-43.jpg",
-    packetStudioWide: "/images/softique-packet-studio-wide.jpg",
-    heroProduct: "/images/softique-packet-studio-43.jpg",
-    heroDual: "/images/softique-packet-studio-wide.jpg",
-    productDetail: "/images/softique-product-detail.jpg",
-    productDark: "/images/softique-product-dark.png",
-    productTable: "/images/softique-product-table.png",
-    machinePhoto: "/images/softique-machine.jpg",
-    logo: "/images/softique-logo.png",
+    packageArtwork: "/images/softique-package.webp",
+    packetStudio43: "/images/softique-packet-studio-43.webp",
+    packetStudioWide: "/images/softique-packet-studio-wide.webp",
+    heroProduct: "/images/softique-packet-studio-43.webp",
+    heroDual: "/images/softique-packet-studio-wide.webp",
+    productDetail: "/images/softique-product-detail.webp",
+    productDark: "/images/softique-product-dark.webp",
+    productTable: "/images/softique-product-table.webp",
+    machinePhoto: "/images/softique-machine.webp",
+    logo: "/images/softique-logo.webp",
+    logoLight: "/images/softique-logo-light.webp",
+    logoWhite: "/images/softique-logo-white.webp",
   },
 };
 

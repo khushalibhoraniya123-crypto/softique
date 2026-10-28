@@ -58,7 +58,7 @@ export default function Manufacturing() {
                   className="w-full h-full object-contain"
                   onError={(e) => {
                     // Fallback to placeholder if file path ever misses
-                    e.currentTarget.src = '/images/softique-machine.jpg';
+                    e.currentTarget.src = '/images/softique-machine.webp';
                   }}
                 />
 
@@ -77,7 +77,7 @@ export default function Manufacturing() {
                 </div>
                 <p className="text-[11px] leading-relaxed text-[#A4B0C2]">
                   {siteConfig.manufacturing.isMachinePhotoPlaceholder
-                    ? 'Owner note: The schematic above serves as an honest asset placeholder. Replace public/images/softique-machine.jpg with your machine workshop photo.'
+                    ? 'Owner note: The schematic above serves as an honest asset placeholder. Replace public/images/softique-machine.webp with your machine workshop photo.'
                     : 'Actual photograph of Softique converting machinery in active operation.'}
                 </p>
               </div>

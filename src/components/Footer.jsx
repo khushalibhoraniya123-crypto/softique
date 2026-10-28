@@ -17,13 +17,12 @@ export default function Footer() {
           
           {/* Col 1: Brand & Wordmark */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-white text-[#12151A] flex items-center justify-center font-serif text-lg font-bold">
-                S
-              </div>
-              <span className="editorial-title text-3xl font-semibold text-white tracking-tight">
-                {siteConfig.brand.name}
-              </span>
+            <div className="flex items-center mb-5">
+              <img
+                src={siteConfig.media.logoWhite || siteConfig.media.logo}
+                alt="Softique™ Logo"
+                className="h-10 sm:h-11 w-auto object-contain"
+              />
             </div>
 
             <p className="text-sm text-[#A0AAB8] max-w-sm leading-relaxed mb-6">

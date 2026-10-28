@@ -63,20 +63,14 @@ export default function Navbar() {
           {/* Brand Logo / Wordmark */}
           <a
             href="#hero"
-            className="group flex items-center gap-2.5 focus:outline-none"
+            className="group flex items-center gap-2 focus:outline-none"
             aria-label={`${siteConfig.brand.name} - Home`}
           >
-            <div className="w-8 h-8 rounded-lg bg-[#1C1E21] text-[#FAF8F5] flex items-center justify-center font-serif text-lg font-semibold tracking-wider transition-transform duration-300 group-hover:scale-105 shadow-xs">
-              S
-            </div>
-            <div className="flex flex-col">
-              <span className="editorial-title text-2xl font-semibold tracking-tight text-[#1C1E21] leading-none">
-                {siteConfig.brand.name}
-              </span>
-              <span className="text-[10px] tracking-widest uppercase text-[#8A8275] font-sans mt-0.5">
-                Rajkot • Gujarat
-              </span>
-            </div>
+            <img
+              src={siteConfig.media.logo}
+              alt="Softique™ Logo"
+              className="h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation Links */}
