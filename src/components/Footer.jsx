@@ -32,7 +32,7 @@ export default function Footer() {
 
             <div className="inline-flex items-center gap-2 text-xs text-[#C5A880] bg-[#1C222C] px-3 py-1.5 rounded-full border border-[#2D3646]">
               <MapPin className="w-3.5 h-3.5" />
-              <span>Manufactured in Rajkot, Gujarat, India</span>
+              <span>Manufactured by: {siteConfig.brand.legalEntity} • Rajkot, Gujarat</span>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-[#A0AAB8]">
               <p className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
-                <span>Rajkot, Gujarat, India (Ex-Factory Dispatch)</span>
+                <span>{siteConfig.contact.address} (Ex-Factory Dispatch)</span>
               </p>
 
               <p className="flex items-center gap-2.5">
@@ -108,7 +108,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-[#222935] text-[11px] text-[#717E91]">
-              Legal Entity: {siteConfig.brand.legalEntity} • Operating Entity in Rajkot
+              Manufactured by: <span className="text-white font-medium">{siteConfig.brand.legalEntity}</span> • Kothariya Chokdi, Rajkot - 360022
             </div>
           </div>
 
@@ -117,7 +117,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#717E91]">
           <p>
-            © {currentYear} {siteConfig.brand.name} ({siteConfig.brand.legalEntity}). All rights reserved.
+            © {currentYear} {siteConfig.brand.name} — Manufactured by {siteConfig.brand.legalEntity}. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">

@@ -88,20 +88,23 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
 
               <div className="space-y-6">
                 
-                {/* Location */}
+                {/* Manufacturer & Location */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DC CE] flex items-center justify-center text-[#1C1E21] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DCCE] flex items-center justify-center text-[#1C1E21] shrink-0">
                     <MapPin className="w-5 h-5 text-[#C5A880]" />
                   </div>
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-[#8A8275]">
-                      Manufacturing & Dispatch Base
+                      Manufactured by
                     </div>
                     <div className="text-base font-semibold text-[#1C1E21] mt-0.5">
-                      Rajkot, Gujarat, India
+                      {siteConfig.brand.legalEntity}
+                    </div>
+                    <div className="text-sm text-[#484E59] mt-0.5 font-medium">
+                      {siteConfig.contact.address}
                     </div>
                     <div className="text-xs text-[#7A7366] mt-1 leading-relaxed">
-                      Industrial production unit. Precise public address will be confirmed upon owner verification.
+                      Napkin converting facility & ex-factory dispatch center in Rajkot, Gujarat.
                     </div>
                   </div>
                 </div>
@@ -133,7 +136,7 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
 
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DC CE] flex items-center justify-center text-[#1C1E21] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DCCE] flex items-center justify-center text-[#1C1E21] shrink-0">
                     <Phone className="w-5 h-5 text-[#C5A880]" />
                   </div>
                   <div>
@@ -154,7 +157,7 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DC CE] flex items-center justify-center text-[#1C1E21] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-[#E3DCCE] flex items-center justify-center text-[#1C1E21] shrink-0">
                     <Mail className="w-5 h-5 text-[#C5A880]" />
                   </div>
                   <div>
@@ -176,11 +179,11 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
               </div>
             </div>
 
-            {/* Honest Integrity Notice */}
-            <div className="p-4 rounded-2xl bg-[#FFFBF0] border border-[#F0DFB6] text-xs text-[#8A671E] flex items-start gap-3">
-              <ShieldAlert className="w-5 h-5 text-[#B87A14] shrink-0 mt-0.5" />
+            {/* Verified Manufacturer Badge */}
+            <div className="p-4 rounded-2xl bg-[#F0FDF4] border border-[#BBF7D0] text-xs text-[#166534] flex items-start gap-3">
+              <ShieldCheck className="w-5 h-5 text-[#16A34A] shrink-0 mt-0.5" />
               <div>
-                <span className="font-semibold text-[#66460B]">No Fabricated Address / Map Pin:</span> We uphold transparent business practices. A precise map pin will be added once physical registration coordinates are finalized.
+                <span className="font-semibold text-[#14532D]">Verified Manufacturing Unit:</span> Manufactured by <strong>JM ENTERPRISE</strong>, Kothariya Chokdi, Rajkot - 360022, Gujarat. Direct unit supply with genuine pricing and transparent fulfillment.
               </div>
             </div>
 

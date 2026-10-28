@@ -8,39 +8,41 @@
 export const siteConfig = {
   brand: {
     name: "Softique",
-    legalEntity: "JM Enterprise", // As displayed on authentic packaging posters
+    legalEntity: "JM ENTERPRISE",
+    manufacturedBy: "JM ENTERPRISE",
     tagline: "Softness in Every Touch.",
     heroSubtitle: "Napkin tissue paper for everyday use, with a focus on thoughtful presentation and dependable business communication.",
-    foundedLocation: "Rajkot, Gujarat, India",
+    foundedLocation: "Kothariya Chokdi, Rajkot - 360022, Gujarat, India",
     establishedYear: 2026,
     stage: "Newly Started Manufacturing Unit",
-    summary: "Based in Rajkot, Gujarat, Softique is a growing tissue-paper business starting with napkin tissue paper. We aim to build lasting business relationships through thoughtful product presentation, clear communication, and attention to the details that matter to our customers.",
+    summary: "Manufactured by JM ENTERPRISE at Kothariya Chokdi, Rajkot, Gujarat, Softique is a dedicated tissue-paper business specializing in premium napkin tissue paper. We build lasting business partnerships through verified product specifications, prompt dispatch, and direct owner communication.",
   },
 
   contact: {
     city: "Rajkot",
     state: "Gujarat",
     country: "India",
-    // Detailed physical unit address - to be updated once owner approves exact public dispatch address
-    address: "Rajkot, Gujarat, India",
-    addressStatus: "pending_exact_address", // 'confirmed' | 'pending_exact_address'
+    pincode: "360022",
+    locality: "Kothariya Chokdi",
+    address: "Kothariya Chokdi, Rajkot - 360022, Gujarat, India",
+    addressStatus: "confirmed",
     
-    // Contact endpoints - editable placeholders
+    // Confirmed business contacts
     phone: {
-      display: "+91 98798 95764", // Configurable verified business line
-      value: "+919879895764",
+      display: "+91 93136 02929",
+      value: "+919313602929",
       status: "verified_owner_contact",
     },
     whatsapp: {
-      number: "919879895764", // Direct international format without '+'
-      display: "+91 98798 95764",
-      defaultMessage: "Hello Softique team, I am interested in wholesale napkin tissue paper supply for my business. Please share details.",
+      number: "919313602929",
+      display: "+91 93136 02929",
+      defaultMessage: "Hello JM ENTERPRISE / Softique team, I am interested in wholesale napkin tissue paper supply for my business. Please share details.",
       status: "verified_owner_contact",
     },
     email: {
-      display: "supply@softique.in",
-      value: "supply@softique.in",
-      status: "configured_placeholder", // Owner can update to custom domain or gmail
+      display: "jmenterprise.softique@gmail.com",
+      value: "jmenterprise.softique@gmail.com",
+      status: "verified_owner_email",
     },
     businessHours: "Monday to Saturday, 9:00 AM – 7:00 PM IST",
   },

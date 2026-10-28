@@ -64,9 +64,9 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE4] border border-[#DCD5C8] text-[#5C5343] text-xs font-medium tracking-wider uppercase mb-6 shadow-2xs"
             >
               <MapPin className="w-3.5 h-3.5 text-[#C5A880]" />
-              <span>Rajkot, Gujarat</span>
+              <span>Kothariya Chokdi, Rajkot</span>
               <span className="text-[#C8BFB0]">•</span>
-              <span>Napkin Tissue Paper Manufacturing</span>
+              <span>Manufactured by JM ENTERPRISE</span>
             </motion.div>
 
             {/* Headline */}

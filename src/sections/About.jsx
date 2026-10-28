@@ -28,10 +28,10 @@ export default function About() {
               <div className="mt-3 px-3 py-2 bg-white rounded-xl border border-[#E5DFD3] flex items-center justify-between text-xs text-[#5C5547]">
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#C5A880]" />
-                  <span className="font-semibold text-[#1C1E21]">Rajkot, Gujarat</span>
+                  <span className="font-semibold text-[#1C1E21]">Kothariya Chokdi, Rajkot</span>
                 </div>
                 <span className="text-[11px] text-[#8C8476] uppercase tracking-wider">
-                  Industrial Hub of Saurashtra
+                  JM ENTERPRISE
                 </span>
               </div>
             </div>
