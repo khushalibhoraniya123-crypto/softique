@@ -11,28 +11,28 @@ export default function ProductShowcase() {
 
   const productImages = [
     {
-      title: 'Packaging Design',
+      title: '3D Pack & Tissues',
+      subtitle: 'Sealed clear plastic packet with realistic depth, folded napkins & soft reflections on marble',
+      src: siteConfig.media.packetStudio43,
+      badge: '3D Product Photography',
+    },
+    {
+      title: 'Front Packaging Design',
       subtitle: 'Official Softique™ front face packaging artwork — India\'s No.1 Tissue Brand',
       src: siteConfig.media.packageArtwork,
-      badge: 'Official Package Design',
+      badge: 'Exact Packaging Artwork',
     },
     {
-      title: '3D Sealed Packet',
-      subtitle: 'Sealed hygienic plastic packet with official packaging artwork',
-      src: siteConfig.media.heroProduct,
-      badge: 'Packaged Product',
-    },
-    {
-      title: 'Dual Pack & Napkins',
-      subtitle: '50 & 70 Sheets Packets displayed with embossed napkins',
-      src: siteConfig.media.heroDual,
-      badge: 'Pack & Presentation',
+      title: 'Studio Showcase & Napkins',
+      subtitle: 'Packet with fanned-out embossed white napkins on warm travertine',
+      src: siteConfig.media.packetStudioWide,
+      badge: 'Studio Setup',
     },
     {
       title: 'Embossed Paper Texture',
       subtitle: 'Close-up detail of virgin fiber texture & border embossing',
       src: siteConfig.media.productDetail,
-      badge: 'Paper Texture',
+      badge: 'Macro Detail',
     },
   ];
 

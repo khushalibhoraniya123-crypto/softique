@@ -5,29 +5,36 @@ import { siteConfig } from '../data/siteConfig';
 import Button from '../components/Button';
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState('package'); // 'package' | 'packet' | 'dual'
+  const [activeTab, setActiveTab] = useState('pack3d'); // 'pack3d' | 'flat' | 'wide' | 'table'
 
   const heroMedia = {
-    package: {
+    pack3d: {
+      src: siteConfig.media.packetStudio43,
+      alt: "Softique 3D sealed plastic packet with stack of embossed virgin fiber napkins on marble countertop",
+      title: "3D Product Packet & Napkins",
+      tag: "Complete 3D Pack",
+      note: "Hygienic Sealed Poly Pack • 100% Virgin Fiber Napkin Stack",
+    },
+    flat: {
       src: siteConfig.media.packageArtwork,
       alt: "Softique Paper Napkin official front face packaging design - Soft. Clean. Reliable.",
-      title: "Official Packaging Design",
-      tag: "Exact Packaging Artwork",
-      note: "100% Virgin Fiber • Soft & Absorbent • 100% Skin Friendly",
+      title: "Front Packaging Artwork",
+      tag: "Exact 1:1 Design",
+      note: "India's NO.1 Tissue Brand • Make in India & Swachh Bharat",
     },
-    packet: {
-      src: siteConfig.media.heroProduct,
-      alt: "Softique Paper Napkin 3D plastic sealed packet on dining table",
-      title: "Sealed 3D Plastic Packet",
-      tag: "Actual Product Photo",
-      note: "Hygienic Protective Poly Packet",
+    wide: {
+      src: siteConfig.media.packetStudioWide,
+      alt: "Softique napkin packet with fanned-out embossed napkins in luxury studio setting",
+      title: "Studio Showcase & Tissues",
+      tag: "Embossing Detail",
+      note: "Delicate perimeter embossed texture on warm travertine",
     },
-    dual: {
-      src: siteConfig.media.heroDual,
-      alt: "Softique Napkin Tissue Paper - 50 and 70 sheets packets with embossed napkins",
-      title: "Pack & Napkin Presentation",
-      tag: "Hospitality Display",
-      note: "50 & 70 Sheets Packets with embossed napkins",
+    table: {
+      src: siteConfig.media.productTable,
+      alt: "Softique napkins in everyday dining presentation",
+      title: "Tabletop Presentation",
+      tag: "Everyday Supply",
+      note: "Compact retail & bulk hospitality packs",
     },
   };
 
@@ -149,39 +156,50 @@ export default function Hero() {
               <div className="relative rounded-3xl p-3 bg-gradient-to-b from-[#FFFFFF] via-[#FBF9F5] to-[#EDE7DB] border border-[#E3DCCE] shadow-2xl overflow-hidden group">
                 
                 {/* View Switcher Tabs */}
-                <div className="flex items-center justify-between gap-1 p-1 mb-2 bg-[#F1EDE5] rounded-xl text-xs font-medium">
+                <div className="flex items-center justify-between gap-1 p-1 mb-2 bg-[#F1EDE5] rounded-xl text-xs font-medium overflow-x-auto">
                   <button
                     type="button"
-                    onClick={() => setActiveTab('package')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
-                      activeTab === 'package'
+                    onClick={() => setActiveTab('pack3d')}
+                    className={`flex-1 min-w-[70px] py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer text-[11px] sm:text-xs ${
+                      activeTab === 'pack3d'
                         ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
                         : 'text-[#686256] hover:text-[#1C1E21]'
                     }`}
                   >
-                    Packaging Design
+                    3D Pack & Tissues
                   </button>
                   <button
                     type="button"
-                    onClick={() => setActiveTab('packet')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
-                      activeTab === 'packet'
+                    onClick={() => setActiveTab('flat')}
+                    className={`flex-1 min-w-[70px] py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer text-[11px] sm:text-xs ${
+                      activeTab === 'flat'
                         ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
                         : 'text-[#686256] hover:text-[#1C1E21]'
                     }`}
                   >
-                    3D Packet
+                    Packaging Artwork
                   </button>
                   <button
                     type="button"
-                    onClick={() => setActiveTab('dual')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer ${
-                      activeTab === 'dual'
+                    onClick={() => setActiveTab('wide')}
+                    className={`flex-1 min-w-[65px] py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer text-[11px] sm:text-xs ${
+                      activeTab === 'wide'
                         ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
                         : 'text-[#686256] hover:text-[#1C1E21]'
                     }`}
                   >
-                    Table Display
+                    Studio Setting
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('table')}
+                    className={`flex-1 min-w-[55px] py-1.5 px-2 rounded-lg transition-all text-center cursor-pointer text-[11px] sm:text-xs ${
+                      activeTab === 'table'
+                        ? 'bg-white text-[#1C1E21] shadow-2xs font-semibold'
+                        : 'text-[#686256] hover:text-[#1C1E21]'
+                    }`}
+                  >
+                    Tabletop
                   </button>
                 </div>
 

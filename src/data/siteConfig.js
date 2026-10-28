@@ -214,10 +214,13 @@ export const siteConfig = {
 
   media: {
     packageArtwork: "/images/softique-package.png",
-    heroProduct: "/images/softique-product.jpg",
-    heroDual: "/images/softique-product-dual.png",
+    packetStudio43: "/images/softique-packet-studio-43.jpg",
+    packetStudioWide: "/images/softique-packet-studio-wide.jpg",
+    heroProduct: "/images/softique-packet-studio-43.jpg",
+    heroDual: "/images/softique-packet-studio-wide.jpg",
     productDetail: "/images/softique-product-detail.jpg",
     productDark: "/images/softique-product-dark.png",
+    productTable: "/images/softique-product-table.png",
     machinePhoto: "/images/softique-machine.jpg",
     logo: "/images/softique-logo.png",
   },
