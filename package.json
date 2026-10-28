@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "serve": "node server/index.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "dotenv": "^18.0.9",
     "framer-motion": "^14.7.1",
     "lucide-react": "^1.63.0",
+    "nodemailer": "^10.2.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "tailwindcss": "^4.3.3"

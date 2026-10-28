@@ -255,7 +255,7 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
                   size="md"
                   className="w-full justify-center text-xs"
                 >
-                  Submit Written Web Enquiry
+                  Submit Enquiry via Email (SMTP)
                 </Button>
 
                 <p className="text-[11px] text-center text-[#8C8476]">

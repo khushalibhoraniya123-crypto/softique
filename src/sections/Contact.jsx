@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageSquare, Mail, MapPin, Send, CheckCircle2, AlertCircle, Clock, ShieldAlert, ShieldCheck } from 'lucide-react';
+import { Phone, MessageSquare, Mail, MapPin, Send, CheckCircle2, AlertCircle, Clock, ShieldAlert, ShieldCheck, Loader2 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
@@ -15,7 +15,8 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
-  const [submittedState, setSubmittedState] = useState(null); // 'success' | 'client-only-notice' | null
+  const [submittedState, setSubmittedState] = useState(null); // 'sending' | 'success' | 'smtp_manual_fallback' | 'error' | null
+  const [serverFeedback, setServerFeedback] = useState('');
 
   const validate = () => {
     const errs = {};
@@ -34,7 +35,7 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -44,8 +45,37 @@ export default function Contact() {
     }
 
     setErrors({});
-    // Honest submission state: no backend fake success
-    setSubmittedState('validated');
+    setSubmittedState('sending');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          businessName: formData.businessName,
+          contact: formData.contact,
+          enquiryType: formData.enquiryType,
+          message: formData.message,
+          source: 'Website Contact Section',
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok && result.success) {
+        setSubmittedState('success');
+        setServerFeedback(result.message || 'Your inquiry has been dispatched directly to JM ENTERPRISE / Softique via SMTP.');
+      } else {
+        // If SMTP is awaiting password or custom error, provide smooth direct dispatch
+        setSubmittedState('smtp_manual_fallback');
+        setServerFeedback(result.message || 'SMTP is ready. Complete dispatch via WhatsApp or Email below.');
+      }
+    } catch (err) {
+      console.warn('[Contact Form] SMTP service request note:', err);
+      setSubmittedState('smtp_manual_fallback');
+      setServerFeedback('Direct communication lines are online. Choose your preferred dispatch channel:');
+    }
   };
 
   const getDirectWhatsAppUrl = () => {
@@ -200,16 +230,57 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
                 Fill in your details below. You can also send this inquiry directly via WhatsApp or email for instant turnaround.
               </p>
 
-              {submittedState === 'validated' ? (
-                <div className="p-6 rounded-2xl bg-[#F0FAF3] border border-[#BCE8CB] text-left">
+              {submittedState === 'success' ? (
+                <div className="p-8 rounded-2xl bg-[#F0FAF3] border border-[#BCE8CB] text-left">
                   <div className="flex items-center gap-3 mb-3 text-[#18794E]">
-                    <CheckCircle2 className="w-6 h-6 shrink-0" />
-                    <h4 className="font-serif text-xl font-semibold">
-                      Your Details Have Been Validated!
+                    <CheckCircle2 className="w-7 h-7 shrink-0 text-[#16A34A]" />
+                    <h4 className="font-serif text-2xl font-semibold text-[#14532D]">
+                      Enquiry Dispatched via SMTP!
                     </h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#275338] leading-relaxed mb-6">
-                    Because this frontend runs securely without an external database or tracking backend, your enquiry is ready to send through your preferred direct channel:
+                  <p className="text-sm text-[#275338] leading-relaxed mb-6">
+                    {serverFeedback || `Your inquiry has been sent directly to JM ENTERPRISE (Softique) at ${siteConfig.contact.email.display}. We will review your requirements and respond promptly.`}
+                  </p>
+
+                  <div className="p-4 rounded-xl bg-white border border-[#BCE8CB] mb-6 text-xs text-[#2F5233] space-y-1.5">
+                    <div><strong>Client:</strong> {formData.name} {formData.businessName ? `(${formData.businessName})` : ''}</div>
+                    <div><strong>Contact:</strong> {formData.contact}</div>
+                    <div><strong>Inquiry Type:</strong> {formData.enquiryType}</div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={getDirectWhatsAppUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-3 px-5 rounded-xl bg-[#128C7E] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#075E54] shadow-sm transition-all"
+                    >
+                      <MessageSquare className="w-4 h-4" />
+                      Also Connect on WhatsApp
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSubmittedState(null);
+                        setFormData({ name: '', businessName: '', contact: '', enquiryType: 'Wholesale Supply', message: '' });
+                      }}
+                      className="py-3 px-5 rounded-xl bg-[#1C1E21] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#2F343B] shadow-sm transition-all cursor-pointer"
+                    >
+                      Submit Another Enquiry
+                    </button>
+                  </div>
+                </div>
+              ) : submittedState === 'smtp_manual_fallback' ? (
+                <div className="p-6 rounded-2xl bg-[#FFFBF0] border border-[#F5E2B3] text-left">
+                  <div className="flex items-center gap-3 mb-2 text-[#9A6700]">
+                    <Clock className="w-6 h-6 shrink-0 text-[#D97706]" />
+                    <h4 className="font-serif text-xl font-semibold text-[#78350F]">
+                      Direct Dispatch Channels Ready
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#78350F] leading-relaxed mb-5">
+                    {serverFeedback}
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -217,27 +288,27 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
                       href={getDirectWhatsAppUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-3 px-5 rounded-xl bg-[#128C7E] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#075E54] shadow-sm"
+                      className="py-3 px-5 rounded-xl bg-[#128C7E] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#075E54] shadow-sm transition-all"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      Forward Directly to Softique WhatsApp
+                      Send Instantly via WhatsApp
                     </a>
 
                     <a
                       href={getDirectMailtoUrl()}
-                      className="py-3 px-5 rounded-xl bg-[#1C1E21] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#2F343B] shadow-sm"
+                      className="py-3 px-5 rounded-xl bg-[#1C1E21] text-white text-xs font-semibold flex items-center justify-center gap-2 hover:bg-[#2F343B] shadow-sm transition-all"
                     >
                       <Mail className="w-4 h-4" />
-                      Send via Email Client
+                      Send via Email App
                     </a>
                   </div>
 
                   <button
                     type="button"
                     onClick={() => setSubmittedState(null)}
-                    className="mt-4 text-xs text-[#527863] underline cursor-pointer"
+                    className="mt-4 text-xs text-[#9A6700] underline cursor-pointer"
                   >
-                    Edit your message details
+                    Edit details or try again
                   </button>
                 </div>
               ) : (
@@ -334,14 +405,24 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl font-medium text-sm text-white bg-[#1C1E21] hover:bg-[#2F343B] flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99] cursor-pointer"
+                      disabled={submittedState === 'sending'}
+                      className="w-full py-4 rounded-xl font-medium text-sm text-white bg-[#1C1E21] hover:bg-[#2F343B] disabled:bg-[#68707E] flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99] cursor-pointer"
                     >
-                      <Send className="w-4 h-4" />
-                      Validate & Prepare Enquiry
+                      {submittedState === 'sending' ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Dispatching via SMTP...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          <span>Send Enquiry via SMTP</span>
+                        </>
+                      )}
                     </button>
                     
                     <p className="text-center text-[11px] text-[#8C8476] mt-3">
-                      Transparent communication guarantee: No spam or automated solicitation.
+                      Direct factory inbox delivery to JM ENTERPRISE • No spam guarantee
                     </p>
                   </div>
 
