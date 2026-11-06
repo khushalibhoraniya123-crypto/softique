@@ -1,5 +1,6 @@
 import React from 'react';
 import { MotionConfig } from 'framer-motion';
+import { useSEO } from './hooks/useSEO';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import ProductShowcase from './sections/ProductShowcase';
@@ -11,6 +12,8 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
+  useSEO();
+
   return (
     <MotionConfig reducedMotion="user">
       <div className="min-h-screen flex flex-col bg-[#FBFBF9] text-[#1C1E21] selection:bg-[#EAE2D2] selection:text-[#1C1E21] overflow-x-hidden">

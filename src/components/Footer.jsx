@@ -20,7 +20,10 @@ export default function Footer() {
             <div className="flex items-center mb-5">
               <img
                 src={siteConfig.media.logoWhite || siteConfig.media.logo}
-                alt="Softique™ Logo"
+                alt="Softique Paper Napkins — JM ENTERPRISE Rajkot"
+                width={160}
+                height={44}
+                loading="lazy"
                 className="h-10 sm:h-11 w-auto object-contain"
               />
             </div>

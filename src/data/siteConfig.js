@@ -11,11 +11,11 @@ export const siteConfig = {
     legalEntity: "JM ENTERPRISE",
     manufacturedBy: "JM ENTERPRISE",
     tagline: "Softness in Every Touch.",
-    heroSubtitle: "Napkin tissue paper for everyday use, with a focus on thoughtful presentation and dependable business communication.",
+    heroSubtitle: "Premium paper napkins and tissue paper napkins for everyday hospitality, dining, and retail supply — manufactured with 100% natural virgin fiber by JM ENTERPRISE in Rajkot, Gujarat.",
     foundedLocation: "Kothariya Chokdi, Rajkot - 360022, Gujarat, India",
     establishedYear: 2026,
     stage: "Newly Started Manufacturing Unit",
-    summary: "Manufactured by JM ENTERPRISE at Kothariya Chokdi, Rajkot, Gujarat, Softique is a dedicated tissue-paper business specializing in premium napkin tissue paper. We build lasting business partnerships through verified product specifications, prompt dispatch, and direct owner communication.",
+    summary: "Manufactured by JM ENTERPRISE at Kothariya Chokdi, Rajkot, Gujarat, Softique is a dedicated paper napkin manufacturer specializing in premium tissue paper napkins. We build lasting business partnerships through verified product specifications, prompt dispatch, and direct factory communication.",
   },
 
   contact: {
@@ -51,7 +51,7 @@ export const siteConfig = {
     name: "Softique Napkin Tissue Paper",
     category: "Napkin Tissue Paper",
     packagingType: "Hygienic Plastic Packet",
-    description: "Thoughtfully crafted paper napkins made from natural virgin fiber, embossed for gentle absorption and packed in clean plastic packets to preserve freshness for everyday hospitality, dining, and retail use.",
+    description: "Softique premium disposable paper napkins are thoughtfully crafted from 100% natural virgin fiber, embossed for gentle absorption and hygienically packed in clean plastic packets for wholesale supply, restaurants, cafes, and everyday household comfort.",
     
     // Confirmed specifications from official packaging
     specifications: [

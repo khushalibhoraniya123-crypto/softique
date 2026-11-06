@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Primary Website Landing Page -->
+  <url>
+    <loc>https://softique.in/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Product Images for Google Images Indexing -->
+    <image:image>
+      <image:loc>https://softique.in/images/softique-packet-studio-43.webp</image:loc>
+      <image:title>Softique Premium Paper Napkin Pack and Stack</image:title>
+      <image:caption>Softique 1-ply virgin fiber paper napkins sealed in hygienic clear plastic packet on marble</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://softique.in/images/softique-package.webp</image:loc>
+      <image:title>Softique Paper Napkin Official Packaging Artwork</image:title>
+      <image:caption>India's No.1 Tissue Brand packaging with 100% natural virgin fiber and skin friendly certifications</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://softique.in/images/softique-packet-studio-wide.webp</image:loc>
+      <image:title>Softique Tissue Paper Napkins Studio Showcase</image:title>
+      <image:caption>Delicate perimeter embossed paper napkins fanned out on warm travertine</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://softique.in/images/softique-product-detail.webp</image:loc>
+      <image:title>Softique Embossed Virgin Fiber Texture Macro Detail</image:title>
+      <image:caption>High-absorption border embossing and natural virgin fiber paper texture</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://softique.in/images/machine-poster.webp</image:loc>
+      <image:title>Softique Paper Napkin Converting Machine Rajkot</image:title>
+      <image:caption>Industrial converting machine roll feed, embosser and folder at Rajkot factory</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://softique.in/images/about-video-poster.webp</image:loc>
+      <image:title>Softique Paper Napkin Official Advertisement Poster</image:title>
+      <image:caption>Committed to quality paper napkin advertisement showcase</image:caption>
+      <image:geo_location>Rajkot, Gujarat, India</image:geo_location>
+    </image:image>
+
+    <!-- Factory Machine Video for Google Video Indexing -->
+    <video:video>
+      <video:thumbnail_loc>https://softique.in/images/machine-poster.webp</video:thumbnail_loc>
+      <video:title>Softique Factory Machine Showcase — Napkin Converting Process</video:title>
+      <video:description>Watch the authentic single-machine dedicated napkin converting process in active operation at JM ENTERPRISE in Rajkot, Gujarat. Virgin paper roll feeding, precision embossing, quarter folding, and stacking.</video:description>
+      <video:content_loc>https://softique.in/videos/machine-showcase.mp4</video:content_loc>
+      <video:duration>40</video:duration>
+      <video:publication_date>2026-11-06T10:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://softique.in/#about">JM ENTERPRISE</video:uploader>
+    </video:video>
+
+    <!-- Brand Commercial Video for Google Video Indexing -->
+    <video:video>
+      <video:thumbnail_loc>https://softique.in/images/about-video-poster.webp</video:thumbnail_loc>
+      <video:title>Softique Paper Napkin Brand Commercial — Soft, Clean, Reliable</video:title>
+      <video:description>Official Softique brand film showcasing 1-ply virgin fiber disposable paper napkins: committed to quality, soft touch, superior absorption, and reliable packaging.</video:description>
+      <video:content_loc>https://softique.in/videos/softique-commercial.mp4</video:content_loc>
+      <video:duration>10</video:duration>
+      <video:publication_date>2026-11-06T12:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:uploader info="https://softique.in/#about">Softique</video:uploader>
+    </video:video>
+  </url>
+
+</urlset>

@@ -68,7 +68,9 @@ export default function Navbar() {
           >
             <img
               src={siteConfig.media.logo}
-              alt="Softique™ Logo"
+              alt="Softique Paper Napkins — Manufactured by JM ENTERPRISE"
+              width={160}
+              height={40}
               className="h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </a>

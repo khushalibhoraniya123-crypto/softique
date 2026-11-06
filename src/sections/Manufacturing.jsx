@@ -245,8 +245,11 @@ export default function Manufacturing() {
                 {/* Ambient Blurred Background (fills borders seamlessly for 9:16 vertical video) */}
                 <img
                   src={siteConfig.manufacturing.machinePosterPath}
-                  alt=""
+                  alt="Softique Napkin Machine Operating Backdrop"
                   aria-hidden="true"
+                  width={720}
+                  height={1280}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-25 scale-110 pointer-events-none"
                 />
                 <div className="absolute inset-0 bg-radial from-transparent via-[#0A0D12]/60 to-[#0A0D12] pointer-events-none" />
@@ -257,6 +260,10 @@ export default function Manufacturing() {
                   ref={videoRef}
                   src={siteConfig.manufacturing.machineVideoPath}
                   poster={siteConfig.manufacturing.machinePosterPath}
+                  title="Softique Factory Napkin Converting Machine Showcase"
+                  aria-label="Softique Factory Napkin Converting Machine Showcase Video"
+                  width={720}
+                  height={1280}
                   preload="metadata"
                   playsInline
                   onTimeUpdate={handleTimeUpdate}

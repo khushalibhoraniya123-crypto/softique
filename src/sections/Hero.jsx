@@ -214,6 +214,9 @@ export default function Hero() {
                       transition={{ duration: 0.3 }}
                       src={currentMedia.src}
                       alt={currentMedia.alt}
+                      width={600}
+                      height={450}
+                      fetchPriority="high"
                       className="w-full h-full object-contain"
                       loading="eager"
                     />

@@ -176,6 +176,10 @@ export default function About() {
                   ref={videoRef}
                   src={siteConfig.media.aboutVideo}
                   poster={siteConfig.media.aboutVideoPoster}
+                  title="Softique Paper Napkin Official Advertisement Film"
+                  aria-label="Softique Paper Napkin Commercial Video"
+                  width={1280}
+                  height={720}
                   preload="metadata"
                   playsInline
                   onTimeUpdate={() => {

@@ -46,8 +46,8 @@ export default function ProductShowcase() {
         {/* Section Header */}
         <SectionHeading
           badge="Featured Offering"
-          title="Softique Napkin Tissue Paper"
-          subtitle="Our dedicated flagship product: 1-ply virgin paper napkins packed in protective plastic packets for everyday retail and wholesale dining supply."
+          title="Softique Premium Paper Napkins"
+          subtitle="1-ply virgin fiber tissue paper napkins with perimeter embossing, packed in hygienic plastic packets for wholesale supply, restaurants, cafes, and daily dining comfort."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mt-8">
@@ -63,7 +63,10 @@ export default function ProductShowcase() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4 }}
                 src={productImages[activeImageIndex].src}
-                alt={productImages[activeImageIndex].title}
+                alt={`Softique Paper Napkins — ${productImages[activeImageIndex].title}: ${productImages[activeImageIndex].subtitle}`}
+                width={600}
+                height={450}
+                loading="lazy"
                 className="w-full h-full object-contain"
               />
 
@@ -95,7 +98,10 @@ export default function ProductShowcase() {
                   <div className="aspect-[4/3] rounded-lg overflow-hidden bg-[#FAF8F5] mb-1.5 flex items-center justify-center">
                     <img
                       src={img.src}
-                      alt={img.title}
+                      alt={`Softique Paper Napkins — ${img.title}`}
+                      width={120}
+                      height={90}
+                      loading="lazy"
                       className="w-full h-full object-contain"
                     />
                   </div>

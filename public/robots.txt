@@ -1,0 +1,13 @@
+# Softique Paper Napkin Robots.txt
+# https://softique.in
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /server/
+
+# Host
+Host: https://softique.in
+
+# XML Sitemap
+Sitemap: https://softique.in/sitemap.xml
