@@ -234,6 +234,8 @@ export const siteConfig = {
     machineVideo: "/videos/machine-showcase.mp4",
     machinePoster: "/images/machine-poster.webp",
     machineAudio: "/audio/corporate-ambient.mp3",
+    aboutVideo: "/videos/softique-commercial.mp4",
+    aboutVideoPoster: "/images/about-video-poster.webp",
     logo: "/images/softique-logo.webp",
     logoLight: "/images/softique-logo-light.webp",
     logoWhite: "/images/softique-logo-white.webp",
