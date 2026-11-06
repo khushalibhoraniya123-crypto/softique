@@ -291,6 +291,28 @@ export default function Manufacturing() {
                   </div>
                 </div>
 
+                {/* Elegant Opening Title Overlay (Displays before start & during first 3.5s of playback) */}
+                <AnimatePresence>
+                  {(!hasStarted || (isPlaying && currentTime < 3.5)) && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -6, scale: 0.98 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className="absolute top-14 inset-x-4 z-25 pointer-events-none flex flex-col items-center text-center"
+                    >
+                      <div className="px-5 py-2.5 rounded-2xl bg-[#0A0D12]/90 backdrop-blur-md border border-[#C5A880]/35 shadow-[0_8px_32px_rgba(0,0,0,0.8)] flex flex-col items-center max-w-sm">
+                        <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-[#C5A880] font-semibold">
+                          {siteConfig.manufacturing.openingTitle || 'PRECISION IN EVERY FOLD'}
+                        </span>
+                        <h3 className="text-sm sm:text-base font-serif text-white tracking-wide mt-0.5">
+                          {siteConfig.manufacturing.openingSubtitle || 'Our Napkin Manufacturing Process'}
+                        </h3>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 {/* Centered Large Play Button (when paused or not started) */}
                 <AnimatePresence>
                   {!isPlaying && (
@@ -429,8 +451,16 @@ export default function Manufacturing() {
                         </div>
                       </div>
 
-                      {/* Right: Quality Indicator & Fullscreen */}
-                      <div className="flex items-center gap-2 sm:gap-3">
+                      {/* Right: Quality Indicator, Soundtrack Badge & Fullscreen */}
+                      <div className="flex items-center gap-2 sm:gap-2.5">
+                        <div
+                          className="hidden md:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] text-[#D8C7A5]"
+                          title="Ambient corporate industrial soundtrack mixed with balanced machine rhythm"
+                        >
+                          <Sparkles className="w-2.5 h-2.5 text-[#C5A880]" />
+                          <span className="font-medium">Studio Mix</span>
+                        </div>
+
                         <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-[#C5A880] font-semibold hidden sm:inline-block">
                           1080p HD
                         </span>

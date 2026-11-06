@@ -133,8 +133,11 @@ export const siteConfig = {
     machinePhotoPath: "/images/machine-poster.webp",
     machineVideoPath: "/videos/machine-showcase.mp4",
     machinePosterPath: "/images/machine-poster.webp",
+    machineAudioPath: "/audio/corporate-ambient.mp3",
     videoDuration: "0:40",
     videoQuality: "Full HD (1080p)",
+    openingTitle: "PRECISION IN EVERY FOLD",
+    openingSubtitle: "Our Napkin Manufacturing Process",
     machinePlaceholderNote: "Actual factory machine operating video from Softique manufacturing unit in Rajkot.",
     
     // Truthful, editable step-by-step workflow
@@ -230,6 +233,7 @@ export const siteConfig = {
     machinePhoto: "/images/machine-poster.webp",
     machineVideo: "/videos/machine-showcase.mp4",
     machinePoster: "/images/machine-poster.webp",
+    machineAudio: "/audio/corporate-ambient.mp3",
     logo: "/images/softique-logo.webp",
     logoLight: "/images/softique-logo-light.webp",
     logoWhite: "/images/softique-logo-white.webp",
