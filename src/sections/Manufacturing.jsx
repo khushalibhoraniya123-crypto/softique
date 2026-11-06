@@ -18,6 +18,7 @@ import {
 import { siteConfig } from '../data/siteConfig';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
+import MachineBackground from '../components/MachineBackground';
 
 export default function Manufacturing() {
   const [activeStep, setActiveStep] = useState(0);
@@ -193,11 +194,9 @@ export default function Manufacturing() {
   }, [isPlaying]);
 
   return (
-    <section id="process" className="py-20 lg:py-32 bg-[#12151A] text-[#FAF8F5] relative overflow-hidden">
-      {/* Background dark cinematic gradients */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#1E2838]/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-[400px] h-[400px] bg-[#2A2318]/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+    <section id="process" className="py-20 lg:py-32 bg-[#0F1318] text-[#FAF8F5] relative overflow-hidden">
+      {/* Premium Animated Industrial Background (Dark navy/black, golden waves, floating particles, technical grid) */}
+      <MachineBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
