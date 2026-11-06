@@ -68,7 +68,7 @@ export function useSEO() {
       if (canonical) {
         canonical.setAttribute(
           'href',
-          id === 'hero' ? 'https://softique.in/' : `https://softique.in/#${id}`
+          id === 'hero' ? 'https://softique.co.in/' : `https://softique.co.in/#${id}`
         );
       }
     };

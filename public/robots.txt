@@ -1,5 +1,5 @@
 # Softique Paper Napkin Robots.txt
-# https://softique.in
+# https://softique.co.in
 
 User-agent: *
 Allow: /
@@ -7,8 +7,7 @@ Disallow: /api/
 Disallow: /server/
 
 # Host
-Host: https://softique.in
+Host: https://softique.co.in
 
 # XML Sitemap
-Sitemap: https://softique.in/sitemap.xml
-
+Sitemap: https://softique.co.in/sitemap.xml

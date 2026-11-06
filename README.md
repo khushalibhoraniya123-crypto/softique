@@ -121,7 +121,7 @@ npm run preview
 All owner-specific details can be updated in a single file without modifying JSX templates:
 
 * **Brand Details:** Name, tagline, supporting messages, legal entity name (`JM Enterprise`).
-* **Contact Endpoints:** Phone number (`+91 98798 95764`), WhatsApp number (`919879895764`), business email (`supply@softique.in`), operating hours.
+* **Contact Endpoints:** Phone number (`+91 93136 02929`), WhatsApp number (`919313602929`), business email (`jmenterprise.softique@gmail.com`), operating hours.
 * **Product Specifications:** Toggle confirmed versus unconfirmed specifications, MOQ (500 packets), and base wholesale rates (₹12.50 / ₹16.50).
 * **Manufacturing Steps:** Customize or remove any step in the converting and dispatch sequence.
 
