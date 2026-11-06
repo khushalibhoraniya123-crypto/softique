@@ -7,11 +7,15 @@ dotenv.config();
  * Creates and verifies nodemailer transport with configured environment credentials.
  */
 export function getMailTransporter() {
+  // Always refresh from .env dynamically so live changes are picked up immediately
+  dotenv.config();
+
   const host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const port = parseInt(process.env.SMTP_PORT || '587', 10);
   const secure = process.env.SMTP_SECURE === 'true' || port === 465;
-  const user = process.env.SMTP_USER || 'jmenterprise.softique@gmail.com';
-  const pass = process.env.SMTP_PASS;
+  const user = (process.env.SMTP_USER || 'jmenterprise.softique@gmail.com').trim();
+  // Strip any accidental wrapping quotes or spaces
+  const pass = (process.env.SMTP_PASS || '').trim().replace(/^['"]|['"]$/g, '');
 
   if (!pass) {
     return null;

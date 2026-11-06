@@ -129,9 +129,13 @@ export const siteConfig = {
     headline: "Our Production Setup",
     subheadline: "Honest, focused manufacturing with dedicated napkin converting machinery in Rajkot.",
     unitSummary: "Softique currently operates one high-precision napkin converting machine. Rather than overextending across multiple lines, our single-line focus ensures hands-on attention to folding precision, clean embossing, and tight packet sealing on every run.",
-    isMachinePhotoPlaceholder: true, // Set to false once the owner uploads actual workshop photo
-    machinePhotoPath: "/images/softique-machine.webp",
-    machinePlaceholderNote: "Photo placeholder active. Owner can place the actual machine photo at public/images/softique-machine.webp.",
+    isMachinePhotoPlaceholder: false, // Owner uploaded actual machine video and photo
+    machinePhotoPath: "/images/machine-poster.webp",
+    machineVideoPath: "/videos/machine-showcase.mp4",
+    machinePosterPath: "/images/machine-poster.webp",
+    videoDuration: "0:40",
+    videoQuality: "Full HD (1080p)",
+    machinePlaceholderNote: "Actual factory machine operating video from Softique manufacturing unit in Rajkot.",
     
     // Truthful, editable step-by-step workflow
     steps: [
@@ -223,7 +227,9 @@ export const siteConfig = {
     productDetail: "/images/softique-product-detail.webp",
     productDark: "/images/softique-product-dark.webp",
     productTable: "/images/softique-product-table.webp",
-    machinePhoto: "/images/softique-machine.webp",
+    machinePhoto: "/images/machine-poster.webp",
+    machineVideo: "/videos/machine-showcase.mp4",
+    machinePoster: "/images/machine-poster.webp",
     logo: "/images/softique-logo.webp",
     logoLight: "/images/softique-logo-light.webp",
     logoWhite: "/images/softique-logo-white.webp",
