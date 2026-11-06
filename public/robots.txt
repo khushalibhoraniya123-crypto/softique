@@ -11,3 +11,4 @@ Host: https://softique.in
 
 # XML Sitemap
 Sitemap: https://softique.in/sitemap.xml
+
