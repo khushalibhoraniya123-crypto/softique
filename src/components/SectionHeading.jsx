@@ -36,7 +36,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className={`editorial-title text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-5 ${
+          className={`editorial-title text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-4 sm:mb-5 ${
             dark ? 'text-[#FAF8F5]' : 'text-[#1C1E21]'
           }`}
         >

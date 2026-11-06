@@ -221,7 +221,7 @@ Message: ${formData.message || 'I am interested in napkin tissue paper supply.'}
 
           {/* Right Column: Transparent Contact & Enquiry Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E8E2D6] shadow-xl">
+            <div className="p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white border border-[#E8E2D6] shadow-xl">
               
               <h3 className="editorial-title text-2xl sm:text-3xl font-semibold text-[#1C1E21] mb-2">
                 Send an Enquiry

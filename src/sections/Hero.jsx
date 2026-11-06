@@ -61,11 +61,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFECE4] border border-[#DCD5C8] text-[#5C5343] text-xs font-medium tracking-wider uppercase mb-6 shadow-2xs"
+              className="inline-flex max-w-full flex-wrap sm:flex-nowrap items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#EFECE4] border border-[#DCD5C8] text-[#5C5343] text-[11px] sm:text-xs font-medium tracking-wider uppercase mb-6 shadow-2xs"
             >
-              <MapPin className="w-3.5 h-3.5 text-[#C5A880]" />
+              <MapPin className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
               <span>Kothariya Chokdi, Rajkot</span>
-              <span className="text-[#C8BFB0]">•</span>
+              <span className="text-[#C8BFB0] hidden xs:inline">•</span>
               <span>Manufactured by JM ENTERPRISE</span>
             </motion.div>
 
@@ -74,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="editorial-title text-4xl sm:text-6xl lg:text-7xl font-semibold text-[#1C1E21] tracking-tight leading-[1.08] mb-6"
+              className="editorial-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1C1E21] tracking-tight leading-[1.1] mb-6"
             >
               Softness in <br className="hidden sm:block" />
               <span className="italic font-normal text-[#2A313C] relative inline-block">
@@ -121,13 +121,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
             >
               <Button
                 href="#product"
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto shadow-md"
+                className="w-full sm:w-auto justify-center shadow-md"
               >
                 Explore Packaging & Product
               </Button>
@@ -136,7 +136,7 @@ export default function Hero() {
                 variant="secondary"
                 size="lg"
                 icon={ArrowUpRight}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto justify-center"
               >
                 Wholesale Enquiry
               </Button>

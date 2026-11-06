@@ -230,13 +230,13 @@ export default function ProductShowcase() {
             </div>
 
             {/* Direct Action CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-[#EAE3D5]">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 pt-4 border-t border-[#EAE3D5]">
               <Button
                 href="#enquiry"
                 variant="primary"
                 size="md"
                 icon={ArrowUpRight}
-                className="flex-1 min-w-[200px]"
+                className="w-full sm:w-auto sm:flex-1 justify-center"
               >
                 Wholesale Enquiry
               </Button>
@@ -244,7 +244,7 @@ export default function ProductShowcase() {
                 href="#contact"
                 variant="outline"
                 size="md"
-                className="flex-1 min-w-[180px]"
+                className="w-full sm:w-auto sm:flex-1 justify-center"
               >
                 Request Product Details
               </Button>

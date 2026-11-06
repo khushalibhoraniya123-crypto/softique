@@ -101,7 +101,7 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
         </div>
 
         {/* Interactive Volume & WhatsApp Supply Planner Card */}
-        <div className="rounded-3xl bg-white border border-[#E3DC CE] p-6 sm:p-10 shadow-xl max-w-4xl mx-auto">
+        <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#E3DCCE] p-4 sm:p-8 md:p-10 shadow-xl max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-[#F0ECE1]">
             <div>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E7A5A] uppercase tracking-wider">
@@ -126,7 +126,7 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
                 <label className="block text-xs font-semibold uppercase tracking-wider text-[#525763] mb-2">
                   Select Pack Variant
                 </label>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                   {[
                     { id: '50-sheets', label: '50 Sheets', rate: '₹12.50/pk' },
                     { id: '70-sheets', label: '70 Sheets', rate: '₹16.50/pk' },
@@ -136,14 +136,14 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
                       key={v.id}
                       type="button"
                       onClick={() => setPackType(v.id)}
-                      className={`py-2.5 px-2 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${
+                      className={`py-2 sm:py-2.5 px-1.5 sm:px-2 rounded-xl text-xs font-medium border text-center transition-all cursor-pointer ${
                         packType === v.id
                           ? 'bg-[#1C1E21] text-white border-[#1C1E21] shadow-xs'
                           : 'bg-[#FAF8F5] text-[#1C1E21] border-[#E5DFD4] hover:border-[#C5A880]'
                       }`}
                     >
-                      <div className="font-semibold">{v.label}</div>
-                      <div className={`text-[10px] ${packType === v.id ? 'text-[#C5A880]' : 'text-[#8A8275]'}`}>
+                      <div className="font-semibold text-[11px] sm:text-xs">{v.label}</div>
+                      <div className={`text-[9px] sm:text-[10px] ${packType === v.id ? 'text-[#C5A880]' : 'text-[#8A8275]'}`}>
                         {v.rate}
                       </div>
                     </button>
@@ -162,7 +162,7 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
                   </span>
                 </div>
 
-                <div className="grid grid-cols-4 gap-2 mb-3">
+                <div className="grid grid-cols-2 xs:grid-cols-4 sm:grid-cols-4 gap-2 mb-3">
                   {[500, 1000, 2500, 5000].map((qty) => (
                     <button
                       key={qty}
@@ -189,8 +189,8 @@ Please provide ex-factory Rajkot quotation and dispatch availability.`;
                   onChange={(e) => setPacketQty(Number(e.target.value))}
                   className="w-full accent-[#0E63B8] cursor-pointer"
                 />
-                <div className="flex justify-between text-[11px] text-[#8C8476] mt-1 font-mono">
-                  <span>500 (Minimum)</span>
+                <div className="flex flex-wrap sm:flex-nowrap justify-between gap-1 text-[10px] sm:text-[11px] text-[#8C8476] mt-1 font-mono">
+                  <span>500 (Min)</span>
                   <span className="font-semibold text-[#1C1E21]">{packetQty.toLocaleString()} Packets Selected</span>
                   <span>10,000+</span>
                 </div>
